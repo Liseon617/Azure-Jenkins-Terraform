@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo apt-get update
 sudo apt-get install python3-pip -y
+sudo apt-get install nginx -y
 
 echo "Waiting for 10 seconds before installing the jenkins package..."
 sleep 10
@@ -29,7 +30,10 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - &&
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" &&
 sudo apt-get update -y &&
 sudo sudo apt-get install docker-ce docker-ce-cli containerd.io -y &&
+sudo apt-get install docker-compose -y
 sudo usermod -aG docker adminuser
-
+sudo usermod -aG docker jenkins
+sudo usermod -aG www-data jenkins
 # Clean up
+sudo systemctl restart jenkins
 rm -f terraform*.zip

@@ -89,10 +89,10 @@ resource "azurerm_linux_virtual_machine" "test-vm" {
   }
 }
 
-data "azurerm_public_ip" "test-ip-data" {
-  name = azurerm_public_ip.test-public-ip.name
-  resource_group_name = var.resource_group_name
-}
+# data "azurerm_public_ip" "test-ip-data" {
+#   name = azurerm_public_ip.test-public-ip.name
+#   resource_group_name = var.resource_group_name
+# }
 
 output "public_ip_address" {
   value = "${azurerm_linux_virtual_machine.test-vm.name} : ${azurerm_linux_virtual_machine.test-vm.public_ip_address}"

@@ -1,1 +1,1 @@
-in cli: ssh -i ~/.ssh/azurerm adminuser@108.143.154.135
+in cli: ssh -i ~/.ssh/azurerm adminuser@172.211.21.143
