@@ -2,6 +2,8 @@
 sudo apt-get update
 sudo apt-get install python3-pip -y
 sudo apt-get install nginx -y
+sudo apt-get install certbot -y
+sudo apt-get install python3-certbot-nginx -y
 
 echo "Waiting for 10 seconds before installing the jenkins package..."
 sleep 10
