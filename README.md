@@ -1,8 +1,6 @@
 # Terraform_for_Azure_Template
 This repository serves as a template for setting up terraform in any environment to deploy Azure VMs.
 
-This repository serves as a template for deploying a FastAPI application with Prometheus monitoring and Grafana dashboards, all containerized with Docker.
-
 ## Overview
 
 This template provides a ready-to-use setup for deploying a VM with Azure alongside other needed resources, based on prior configuration solution, with Terraform.
@@ -16,8 +14,8 @@ This template provides a ready-to-use setup for deploying a VM with Azure alongs
 
 - [Prerequisites](#prerequisites)
 - [Quickstart](#quickstart)
-- [VM Configuration](#vmconfiguration)
-- [Host OS Configuration](#hostosconfiguration)
+- [VM Configuration](#vm-configuration)
+- [Host OS Configuration](#host-os-configuration)
 - [Documentation](#documentation)
 - [Authors](#authors)
 
@@ -50,7 +48,7 @@ terraform apply
 ```
 4. Approve terraform plan by inputting 'yes' when prompted for approval
 
-## VMconfiguration
+## VM configuration
 To customize the VM on creation, change the jenkins/customdata.tpl file for your specific needs, consider the following modifications:
 
 1. Consolidated sudo apt-get install Commands: Grouped package installations to reduce the number of apt-get commands, improving efficiency.
@@ -61,12 +59,12 @@ To customize the VM on creation, change the jenkins/customdata.tpl file for your
 
 You can further customize the VM configuration in your /jenkins/customdata.tpl file based on specific needs not covered in this script.
 
-## HostOSConfiguration
+## Host OS Configuration
 Ensure the appropriate SSH script for the host OS is available in the /jenkins directory. This script should be named according to the pattern \${var.host_os}-ssh-script.tpl. Verify that the host_os variable is correctly set in the terraform.tfvars file to match the OS of the current user.
 
 
 ## Documentation
-[Documentation(set up and configuration)](https://docs.google.com/document/d/1V13yVvlGjnnr_MeRa6ydn9yeDXzCmYuBqHHFOziYqHw/edit#heading=h.hnstmjjlgnbw)
+[Documentation (set up and configuration)](https://docs.google.com/document/d/1V13yVvlGjnnr_MeRa6ydn9yeDXzCmYuBqHHFOziYqHw/edit)
 
 ## Authors
 
